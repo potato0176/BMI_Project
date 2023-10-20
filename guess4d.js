@@ -3,8 +3,9 @@ var ans=[0,1,2,3,4,5,6,7,8,9];
 ans.sort(function(a, b){return Math.random()-0.5});
 answer=[];
 for(var x=0;x<4;x++){
-    ans[x]=answer[x];
+    answer[x]=ans[x];
 }
+console.log(answer);
 console.log("U have ten chance to guess.");
 for(var i=0; i<10;i++){
     var counterA=0;
@@ -28,10 +29,10 @@ for(var i=0; i<10;i++){
                 else{
                     counterB++;
                 }
+                console.log("A:"+counterA);
+                console.log("B:"+counterB);
             }
         }
-        console.log(counterA);
-        console.log(counterB);
     }
     console.log("Your guess:" + counterA+"A"+counterB+"B")
 
